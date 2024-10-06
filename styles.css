@@ -1,3 +1,33 @@
+h1 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.3em;
+    color: rgb(19, 77, 104);
+}
+
+.FormNameFarm {
+    background-color: rgba(138, 128, 85, 0.651);
+    border-radius: 15%;
+    margin-top: 2%;
+    padding: 1%;
+    border: solid;   
+}
+
+.button {
+    background-color: rgba(56, 158, 206, 0.829);
+    color: aliceblue;
+    border-radius: 10%;
+    font-size: 1.1em;
+    padding: 1.5%;
+    border: none;
+}
+
+.button:hover {
+    background-color: rgb(141, 83, 56);
+}
+
 main {
     color: rgb(191, 199, 191);
     text-align: center;
@@ -5,7 +35,7 @@ main {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: 10%;
+    margin-top: 7%;
    
 }
 
