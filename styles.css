@@ -15,7 +15,7 @@ p {
     border: solid;   
 }
 
-.button {
+button {
     background-color: rgba(56, 158, 206, 0.829);
     color: aliceblue;
     border-radius: 10%;
@@ -24,7 +24,7 @@ p {
     border: none;
 }
 
-.button:hover {
+button:hover {
     background-color: rgb(141, 83, 56);
 }
 
