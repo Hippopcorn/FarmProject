@@ -1,9 +1,8 @@
 //Récupérer le nom de la ferme
-buttonFarmName = document.querySelector(".buttonName");
-console.log(buttonFarmName)
-NameFarm = document.querySelector(".farmName");
+formulaireFarmName = document.querySelector(".FormNameFarm");
 
-buttonFarmName.addEventListener("click", () => {
-    event.preventDefault
-    console.log(NameFarm)
+formulaireFarmName.addEventListener("submit", function (event) {
+    event.preventDefault();
+    NameChoice = event.target.querySelector("[name="farmName]").value  
+    console.log(NameChoice);
 })
