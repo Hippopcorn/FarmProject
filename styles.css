@@ -40,7 +40,27 @@ main {
 }
 
 body {
-    background-color: rgb(80, 112, 33);
+    background-color: rgb(96, 124, 54);
     background-image: url(images/ChampMais.jpeg);
     background-size: cover;  
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgba(195, 255, 127, 0.5);
+}
+
+.menu p {
+    border: solid;
+    border-color: rgb(96, 124, 54);
+    border-radius: 5%;
+    padding: 0.5%;
+    color: rgb(96, 124, 54);
+}
+
+.menu p:hover {
+    background-color: rgb(96, 124, 54);
+    color: rgba(195, 255, 127, 0.63);;
 }
