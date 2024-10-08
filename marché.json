@@ -1,0 +1,63 @@
+[
+{
+	"animal":"Poule",
+	"name":"Cocotte",
+	"production":"oeufs"
+},
+
+{
+    "animal":"Vache",
+	"name":"Paquerette",
+	"production":"lait"
+},
+{
+    "animal":"Cochon",
+	"name":"Edgard",
+	"production":"viande"
+},
+{
+    "animal":"Canard",
+	"name":"Alphonse",
+	"production":"oeufs"
+},
+{
+    "animal":"Poule",
+	"name":"Hermione",
+	"production":"oeufs"
+},
+{
+    "animal":"Vache",
+	"name":"Bella",
+	"production":"lait"
+},
+{
+    "animal":"Cochon",
+	"name":"Gendarme",
+	"production":"viande"
+},
+{
+    "animal":"Poule",
+	"name":"Marrante",
+	"production":"oeufs"
+},
+{
+    "animal":"Poule",
+	"name":"Rouquine",
+	"production":"oeufs"
+},
+{
+    "animal":"Vache",
+	"name":"Douce",
+	"production":"lait"
+},
+{
+    "animal":"Cochon",
+	"name":"José",
+	"production":"viande"
+},
+{
+    "animal":"Canard",
+	"name":"Vaillant",
+	"production":"oeufs"
+},
+]
