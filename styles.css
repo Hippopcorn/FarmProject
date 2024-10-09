@@ -1,5 +1,6 @@
 h1 {
     font-size: 2em;
+    text-align: center;
 }
 
 p {
@@ -62,4 +63,24 @@ body {
 .menu p:hover {
     background-color: rgb(96, 124, 54);
     color: rgba(195, 255, 127, 0.63);;
+}
+
+.fichesAnimaux {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+newAnimal {
+    border: solid;
+    color: rgb(255, 255, 255);
+    margin: 5%;
+    padding: 2%;
+}
+
+.accrocheMarché {
+    text-align: center;
+    padding-top: 5%;
+    font-size: 1.5em;
+    color: aliceblue;
 }

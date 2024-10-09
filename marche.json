@@ -1,0 +1,38 @@
+[
+	{
+		"animal":"poule",
+		"size":["petite","moyenne","grande"],
+		"production":"oeufs",
+		"price":[30,50,100]
+	},
+	{
+		"animal":"vache",
+		"size":["petite","moyenne","grande"],
+		"production":"lait",
+		"price":[100,200,300]
+	},
+	{
+		"animal":"cochon",
+		"size":["petit","moyen","grand"],
+		"production":"viande",
+		"price":[50,100,200]
+	},
+	{
+		"animal":"canard",
+		"size":["petit","moyen","grand"],
+		"production":"oeufs de canard",
+		"price":[400,700,1000]
+	},
+	{
+		"animal":"mouton",
+		"size":["petit","moyen","grand"],
+		"production":"laine",
+		"price":[200,300,400]
+	},
+	{
+		"animal":"chèvre",
+		"size":["petite","moyenne","grande"],
+		"production":"lait de chèvre",
+		"price":[600,1000,1500]
+	}
+]
