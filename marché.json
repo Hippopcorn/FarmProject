@@ -1,63 +1,38 @@
 [
 {
-	"animal":"Poule",
-	"name":"Cocotte",
+	"animal":"poule",
+	"size":[petite,moyenne,grande],
 	"production":"oeufs"
-},
-
-{
-    "animal":"Vache",
-	"name":"Paquerette",
-	"production":"lait"
+	"prix":[30,50,100]
 },
 {
-    "animal":"Cochon",
-	"name":"Edgard",
-	"production":"viande"
+        "animal":"vache",
+	"size":[petite,moyenne,grande],
+	"production":"lait",
+	"prix":[100,200,300]
 },
 {
-    "animal":"Canard",
-	"name":"Alphonse",
-	"production":"oeufs"
+    	"animal":"cochon",
+	"size":[petit,moyen,grand],
+	"production":"viande",
+	"prix":[50,100,200]
 },
 {
-    "animal":"Poule",
-	"name":"Hermione",
-	"production":"oeufs"
+        "animal":"canard",
+	"size":[petit,moyen,grand],
+	"production":"oeufs de canard",
+	"prix":[400,700,1000]
 },
 {
-    "animal":"Vache",
-	"name":"Bella",
-	"production":"lait"
+        "animal":"mouton",
+	"size":[petit,moyen,grand],
+	"production":"laine",
+	"prix":[200,300,400]
 },
 {
-    "animal":"Cochon",
-	"name":"Gendarme",
-	"production":"viande"
-},
-{
-    "animal":"Poule",
-	"name":"Marrante",
-	"production":"oeufs"
-},
-{
-    "animal":"Poule",
-	"name":"Rouquine",
-	"production":"oeufs"
-},
-{
-    "animal":"Vache",
-	"name":"Douce",
-	"production":"lait"
-},
-{
-    "animal":"Cochon",
-	"name":"José",
-	"production":"viande"
-},
-{
-    "animal":"Canard",
-	"name":"Vaillant",
-	"production":"oeufs"
-},
+        "animal":"chèvre",
+	"size":[petite,moyenne,grande],
+	"production":"lait de chèvre",
+	"prix":[600,1000,1500]
+}
 ]
