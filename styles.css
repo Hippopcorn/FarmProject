@@ -23,6 +23,7 @@ button {
     font-size: 1.1em;
     padding: 1.5%;
     border: none;
+    text-align: center;
 }
 
 button:hover {
@@ -36,8 +37,7 @@ button:hover {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-top: 7%;
-   
+    margin-top: 7%;  
 }
 
 body {
@@ -73,9 +73,15 @@ body {
 
 newAnimal {
     border: solid;
-    color: rgb(255, 255, 255);
+    color: rgb(17, 61, 19);
+    background-color: rgb(225, 226, 176);
     margin: 5%;
     padding: 2%;
+}
+
+typeAnimal {
+    font-weight: bold;
+    font-size: 1.5em;
 }
 
 .accrocheMarché {
