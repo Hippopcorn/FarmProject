@@ -19,7 +19,7 @@ function generateAnimalRandom(listName, lengthList, nbrAnimalsToGenerate) {
             const animalElement = document.createElement("newAnimal");
             
             // On crée les différents éléments et on ajoute les informations
-            const typeAnimal = document.createElement("p");
+            const typeAnimal = document.createElement("typeAnimal");
             typeAnimal.innerText = animalToAdd.animal;
             
             const sizeAnimal = document.createElement("p");
@@ -29,7 +29,11 @@ function generateAnimalRandom(listName, lengthList, nbrAnimalsToGenerate) {
             productionAnimal.innerText = `produit : ${animalToAdd.production}`;
             
             const priceAnimal = document.createElement("p");
-            priceAnimal.innerText = `prix : ${animalToAdd.price[Isize]}`;
+            priceAnimal.innerText = `prix : ${animalToAdd.price[Isize]}$`;
+
+            const achatBouton = document.createElement("button");
+            achatBouton.dataset.id = animalToAdd.animal;
+            achatBouton.textContent = "Acheter";
             
 
             // Récupération de l'élément du DOM qui accueillera les fiches
@@ -42,7 +46,8 @@ function generateAnimalRandom(listName, lengthList, nbrAnimalsToGenerate) {
             animalElement.appendChild(typeAnimal);
             animalElement.appendChild(sizeAnimal);
             animalElement.appendChild(productionAnimal);
-            animalElement.appendChild(priceAnimal);      
+            animalElement.appendChild(priceAnimal);  
+            animalElement.appendChild(achatBouton);    
     }
 }       
 generateAnimalRandom(animals, animals.length, 3) 
