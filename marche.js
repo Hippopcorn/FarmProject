@@ -17,19 +17,24 @@ function generateAnimalRandom(listName, lengthList, nbrAnimalsToGenerate) {
 
             //création d'une balise pour ajouter l'animal
             const animalElement = document.createElement("newAnimal");
+
             
             // On crée les différents éléments et on ajoute les informations
             const typeAnimal = document.createElement("typeAnimal");
             typeAnimal.innerText = animalToAdd.animal;
             
+            const imgAnimal = document.createElement("img");
+            imgAnimal.src = animalToAdd.image;
+            imgAnimal.style.height = '200px';
+
             const sizeAnimal = document.createElement("p");
-            sizeAnimal.innerText = `taille : ${animalToAdd.size[Isize]}`;
+            sizeAnimal.innerText = `Taille : ${animalToAdd.size[Isize]}`;
             
             const productionAnimal = document.createElement("p");
-            productionAnimal.innerText = `produit : ${animalToAdd.production}`;
+            productionAnimal.innerText = `Produit : ${animalToAdd.production}`;
             
             const priceAnimal = document.createElement("p");
-            priceAnimal.innerText = `prix : ${animalToAdd.price[Isize]}$`;
+            priceAnimal.innerText = `Prix : ${animalToAdd.price[Isize]} 💲`;
 
             const achatBouton = document.createElement("button");
             achatBouton.dataset.id = animalToAdd.animal;
@@ -44,6 +49,9 @@ function generateAnimalRandom(listName, lengthList, nbrAnimalsToGenerate) {
 
             // On rattache toutes nos infos à la nouvelle balise animal
             animalElement.appendChild(typeAnimal);
+            animalElement.appendChild(document.createElement("br"));
+            animalElement.appendChild(document.createElement("br"));
+            animalElement.appendChild(imgAnimal);
             animalElement.appendChild(sizeAnimal);
             animalElement.appendChild(productionAnimal);
             animalElement.appendChild(priceAnimal);  

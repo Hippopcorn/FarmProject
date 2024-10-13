@@ -1,38 +1,44 @@
 [
 	{
-		"animal":"poule",
+		"image": "images/poule.webp",
+		"animal":"Poule",
 		"size":["petite","moyenne","grande"],
-		"production":"oeufs",
+		"production":"oeufs 🥚",
 		"price":[30,50,100]
 	},
 	{
-		"animal":"vache",
+		"image": "images/vache.webp",
+		"animal":"Vache",
 		"size":["petite","moyenne","grande"],
-		"production":"lait",
+		"production":"fromage 🧀",
 		"price":[100,200,300]
 	},
 	{
-		"animal":"cochon",
+		"image": "images/cochon.webp",
+		"animal":"Cochon",
 		"size":["petit","moyen","grand"],
-		"production":"viande",
+		"production":"bacon 🥓",
 		"price":[50,100,200]
 	},
 	{
-		"animal":"canard",
+		"image": "images/canard.webp",
+		"animal":"Canard",
 		"size":["petit","moyen","grand"],
-		"production":"oeufs de canard",
+		"production":"cuisse de canard 🍗",
 		"price":[400,700,1000]
 	},
 	{
-		"animal":"mouton",
+		"image": "images/mouton.webp",
+		"animal":"Mouton",
 		"size":["petit","moyen","grand"],
-		"production":"laine",
+		"production":"laine 🧶",
 		"price":[200,300,400]
 	},
 	{
-		"animal":"chèvre",
+		"image": "images/chèvre.webp",
+		"animal":"Chèvre",
 		"size":["petite","moyenne","grande"],
-		"production":"lait de chèvre",
+		"production":"lait de chèvre 🥛",
 		"price":[600,1000,1500]
 	}
 ]

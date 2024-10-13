@@ -1,3 +1,15 @@
+@font-face {
+    font-family: 'Woodcutter';
+    src: url('/polices/Woodcutter noise.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+
+html {
+    font-family: 'Woodcutter', serif;
+}
+
 h1 {
     font-size: 2em;
     text-align: center;
@@ -72,21 +84,28 @@ body {
 }
 
 newAnimal {
-    border: solid;
     color: rgb(17, 61, 19);
     background-color: rgb(225, 226, 176);
     margin: 5%;
     padding: 2%;
+    border-radius: 5%;
+    text-align: center;
+    border: 30px solid transparent;
+    border-image-source: url("images/bois.webp");
+    border-image-slice: 150; /*définir combien de pixels de l'image sont "découpés" pour former les bords*/
+    border-image-repeat: round; /* La valeur round va répéter l'image tout en la redimensionnant si besoin pour éviter des coupures*/
 }
 
-typeAnimal {
+typeAnimal {  
     font-weight: bold;
     font-size: 1.5em;
+    text-align: center;
+    color : rgb(35, 97, 126);
 }
 
 .accrocheMarché {
     text-align: center;
-    padding-top: 5%;
     font-size: 1.5em;
     color: aliceblue;
 }
+
