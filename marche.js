@@ -59,3 +59,13 @@ function generateAnimalRandom(listName, lengthList, nbrAnimalsToGenerate) {
     }
 }       
 generateAnimalRandom(animals, animals.length, 3) 
+
+function buyAnimal() {
+    const buttonAchat = document.querySelectorAll(".buttonAchat")
+    console.log(buttonAchat)
+    buttonAchat.addEventListener("click", (e) => {
+        // const AnimalToBuy = e.target.querySelector(".data-id");
+        console.log("vous avez cliqué sur le bouton");
+    })
+}
+buyAnimal()
