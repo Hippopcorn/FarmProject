@@ -94,6 +94,7 @@ newAnimal {
     border-image-source: url("images/bois.webp");
     border-image-slice: 150; /*définir combien de pixels de l'image sont "découpés" pour former les bords*/
     border-image-repeat: round; /* La valeur round va répéter l'image tout en la redimensionnant si besoin pour éviter des coupures*/
+    width: 20%;
 }
 
 typeAnimal {  
