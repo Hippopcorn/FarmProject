@@ -1,3 +1,6 @@
+import { getMonney } from "./monney.js";
+import { getCapacityFarm } from "./farm.js";
+
 const reponse = await fetch("marche.json");
 const animals = await reponse.json();
 
@@ -41,7 +44,7 @@ function generateAnimalRandom(listName, lengthList, nbrAnimalsToGenerate) {
 
         const achatBouton = document.createElement("button");
         achatBouton.classList.add("buttonAchat");
-        achatBouton.dataset.id = animalToAdd.animal;
+        achatBouton.dataset.price = animalToAdd.price[Isize];
         achatBouton.textContent = "Acheter";
 
 
@@ -63,6 +66,7 @@ function generateAnimalRandom(listName, lengthList, nbrAnimalsToGenerate) {
         animalElement.appendChild(achatBouton);
     }
 }
+
 generateAnimalRandom(animals, animals.length, 3)
 
 function buyAnimal() {
@@ -70,9 +74,27 @@ function buyAnimal() {
     console.log(buttonsAchat)
     for (let iButtons = 0; iButtons < buttonsAchat.length; iButtons++) {
         buttonsAchat[iButtons].addEventListener("click", (e) => {
-            // const AnimalToBuy = e.target.querySelector(".data-id");
-            console.log(AnimalToBuy);
+            // const AnimalToBuy = e.target.parentElement.innerHTML;
+            console.log(e.target.dataset.price);
         })
     }
 }
 buyAnimal()
+
+function afficherInfos() {
+    const parentE = document.querySelector(".barreInfos");
+    const affichageCapacity = document.createElement("p");
+    const capacity = getCapacityFarm();
+    affichageCapacity.innerText = `Capacite de la ferme : x / ${capacity}`
+    parentE.appendChild(affichageCapacity)
+
+    const titreMarche = document.createElement("h1");
+    titreMarche.innerText = "Bienvenue au marché!"
+    parentE.appendChild(titreMarche)
+
+    const affichageSolde = document.createElement("p");
+    const solde = getMonney();
+    affichageSolde.innerText = `Votre solde : ${solde} $`
+    parentE.appendChild(affichageSolde)
+}
+afficherInfos()
