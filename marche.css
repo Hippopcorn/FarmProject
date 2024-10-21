@@ -1,0 +1,55 @@
+
+.fichesAnimaux {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.newAnimal-container{
+    margin: 5%;
+    padding: 2.5%;
+    border-radius: 5%;
+    text-align: center;
+    border: 30px solid transparent;
+    border-image: url("images/panneau.webp") 250 / 80px round;
+    width: 15%;
+}
+.newAnimal-card {
+    background-color: rgb(224, 224, 191);
+    border-radius: 5%;
+    text-align: center;
+    padding: 2%;
+}
+
+typeAnimal {  
+    font-weight: bold;
+    font-size: 1.5em;
+    text-align: center;
+    color : rgb(35, 97, 126);
+    background-color: rgb(225, 226, 176);
+}
+
+.accrocheMarché {
+    text-align: center;
+    font-size: 1.5em;
+    color: aliceblue;
+}
+
+.barreInfos {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10%;
+    flex-grow: 1;
+}
+
+.barreInfos h1 {
+    background-image: url(images/CadreBois.png); 
+    background-position: center;
+    background-size: cover;
+    padding: 2% 6% 2% 6%;
+    background-repeat: no-repeat;
+    /* border-image: url(images/CadreBois.png) 0 / 150px round;
+    padding: 2%; */
+}

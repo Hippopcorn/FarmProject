@@ -1,0 +1,3 @@
+-créer une liste dans la ferme pour mettre tout les animaux achetés
+-finir le système d'achat
+-afficher les animaux dans l'inventaire

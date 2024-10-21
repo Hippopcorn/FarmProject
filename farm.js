@@ -8,6 +8,10 @@ export function initFarm(name) {
     initMonney()
 }
 
-export function getCapacityFarm(){
+export function getCapacityFarm() {
     return window.localStorage.getItem(keyCapacityAnimals)
+}
+
+export function getNameFarm() {
+    return window.localStorage.getItem("nameFarm")
 }
