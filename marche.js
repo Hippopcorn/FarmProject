@@ -13,10 +13,20 @@ function animalRandom(listName, lengthList) {
 }
 
 function generateAnimalRandom(listName, lengthList, nbrAnimalsToGenerate) {
+    let storedAnimals = JSON.parse(localStorage.getItem('animaux')) || []; // Récupère les animaux déjà stockés, sinon un tableau vide
+
     for (let i = 0; i < nbrAnimalsToGenerate; i++) {
         const animalToAdd = animalRandom(listName, lengthList)
         // on génère un Index aléatoire qui servira pour la taille de l'animal et son prix
         const Isize = Math.floor(Math.random() * ((2) - 0 + 1)) + 0;
+
+        // Création d'un objet avec les informations pertinentes
+        const animalInfo = {
+            type: animalToAdd.animal,
+            image: animalToAdd.image,
+            taille: animalToAdd.size[Isize],
+            produit: animalToAdd.production
+        };
 
         //création d'une balise pour ajouter l'animal
         const animalContainer = document.createElement("div");
@@ -47,6 +57,16 @@ function generateAnimalRandom(listName, lengthList, nbrAnimalsToGenerate) {
         achatBouton.dataset.price = animalToAdd.price[Isize];
         achatBouton.textContent = "Acheter";
 
+        // Ajoute un événement au bouton "Acheter" pour enregistrer les infos dans le LocalStorage
+        achatBouton.addEventListener("click", function () {
+            // Ajoute cet animal au tableau des animaux stockés
+            storedAnimals.push(animalInfo);
+
+            // Met à jour le localStorage
+            localStorage.setItem('animaux', JSON.stringify(storedAnimals));
+
+            console.log(`${animalInfo.type} a été ajouté au panier.`);
+        });
 
         // Récupération de l'élément du DOM qui accueillera les fiches
         const sectionFiches = document.querySelector(".fichesAnimaux");
@@ -74,7 +94,6 @@ function buyAnimal() {
     console.log(buttonsAchat)
     for (let iButtons = 0; iButtons < buttonsAchat.length; iButtons++) {
         buttonsAchat[iButtons].addEventListener("click", (e) => {
-            // const AnimalToBuy = e.target.parentElement.innerHTML;
             console.log(e.target.dataset.price);
         })
     }

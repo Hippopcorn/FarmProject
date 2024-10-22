@@ -1,0 +1,16 @@
+.animaux {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.animal-container{
+    margin: 5%;
+    padding: 2.5%;
+    border-radius: 5%;
+    text-align: center;
+    border: 30px solid transparent;
+    border-image: url("images/panneau.webp") 250 / 80px round;
+    width: 15%;
+}
