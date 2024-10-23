@@ -1,4 +1,4 @@
-export function setNewAnimalInFarm() {
+ function setNewAnimalInFarm() {
     // Récupérer les animaux stockés dans le LocalStorage
     const storedAnimals = JSON.parse(localStorage.getItem('animaux')) || []; 
 
@@ -9,12 +9,20 @@ export function setNewAnimalInFarm() {
         const animalContainer = document.createElement("div");
         animalContainer.classList.add("animal-container");
 
-        const animalType = document.createElement("h2");
-        animalType.innerText = animal.type;
+        const animalImage = document.createElement("div");
+        animalImage.classList.add("animal-image");
 
         const imgAnimal = document.createElement("img");
         imgAnimal.src = animal.image;
-        imgAnimal.classList.add("animal-image");
+        animalImage.appendChild(imgAnimal)
+        
+
+        const animalInfos = document.createElement("div");
+        animalInfos.classList.add("animal-infos");
+
+        const animalType = document.createElement("h2");
+        animalType.innerText = animal.type;
+
 
         const tailleAnimal = document.createElement("p");
         tailleAnimal.innerText = `Taille : ${animal.taille}`;
@@ -23,12 +31,13 @@ export function setNewAnimalInFarm() {
         produitAnimal.innerText = `Produit : ${animal.produit}`;
 
         // Ajout des éléments dans le conteneur animal
-        animalContainer.appendChild(animalType);
-        animalContainer.appendChild(imgAnimal);
-        animalContainer.appendChild(tailleAnimal);
-        animalContainer.appendChild(produitAnimal);
+        animalInfos.appendChild(animalType);
+        animalInfos.appendChild(tailleAnimal);
+        animalInfos.appendChild(produitAnimal);
 
         // Ajout du conteneur dans la page
+        animalContainer.appendChild(animalImage);
+        animalContainer.appendChild(animalInfos);
         animalsListDiv.appendChild(animalContainer);
     });
 }
