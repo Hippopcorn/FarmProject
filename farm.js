@@ -9,9 +9,16 @@ export function initFarm(name) {
 }
 
 export function getCapacityFarm() {
-    return window.localStorage.getItem(keyCapacityAnimals)
+    return parseInt(window.localStorage.getItem(keyCapacityAnimals))
 }
 
 export function getNameFarm() {
     return window.localStorage.getItem("nameFarm")
+}
+
+
+export function checkCapacityFarm() {
+    const listeAnimaux = JSON.parse(localStorage.getItem('animaux')) || [];
+    const capacityActuelle = listeAnimaux.length
+    return parseInt(capacityActuelle, 10) < getCapacityFarm()
 }

@@ -3,10 +3,11 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .newAnimal-container{
-    margin: 5%;
+    margin: 1%;
     padding: 2.5%;
     border-radius: 5%;
     text-align: center;
@@ -42,6 +43,7 @@ typeAnimal {
     align-items: center;
     gap: 10%;
     flex-grow: 1;
+    height: 140px;
 }
 
 .barreInfos h1 {

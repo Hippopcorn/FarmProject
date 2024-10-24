@@ -12,14 +12,15 @@
 }
 
 .animal-image {
+    z-index: 1;
     position: absolute;
     width: 150px;
-    height: 300px;
-    z-index: 0;
+    height: 200px;
     padding-top: 50px;
-    background-color: blueviolet;
     padding-right: 40px;
-    opacity: 0.5;
+    border: solid;
+    opacity: 1;
+    background-color: rgb(87, 67, 25);
 }
 
 .animal-image img {
@@ -28,9 +29,22 @@
 
 .animal-infos {
     width: 150px;
-    height: 300px;
-    background-color: aquamarine;
+    height: 200px;
     padding: 20px;
     text-align: center;
-    padding-bottom: 30px;
+    padding-bottom: 30px;  
+}
+
+.animal-infos p {
+    color: black;
+}
+
+.animal-image:hover {
+    z-index: 1;
+    width: 150px;
+    height: 200px;
+    z-index: 0;
+    padding-top: 50px;
+    padding-right: 40px;
+    opacity: 0.2;
 }

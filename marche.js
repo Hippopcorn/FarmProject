@@ -1,5 +1,5 @@
-import { getMonney } from "./monney.js";
-import { getCapacityFarm } from "./farm.js";
+import { getMonney, testMonney, pullMonney } from "./monney.js";
+import { getCapacityFarm, checkCapacityFarm } from "./farm.js";
 
 const reponse = await fetch("marche.json");
 const animals = await reponse.json();
@@ -57,17 +57,6 @@ function generateAnimalRandom(listName, lengthList, nbrAnimalsToGenerate) {
         achatBouton.dataset.price = animalToAdd.price[Isize];
         achatBouton.textContent = "Acheter";
 
-        // Ajoute un événement au bouton "Acheter" pour enregistrer les infos dans le LocalStorage
-        achatBouton.addEventListener("click", function () {
-            // Ajoute cet animal au tableau des animaux stockés
-            storedAnimals.push(animalInfo);
-
-            // Met à jour le localStorage
-            localStorage.setItem('animaux', JSON.stringify(storedAnimals));
-
-            console.log(`${animalInfo.type} a été ajouté au panier.`);
-        });
-
         // Récupération de l'élément du DOM qui accueillera les fiches
         const sectionFiches = document.querySelector(".fichesAnimaux");
 
@@ -84,27 +73,21 @@ function generateAnimalRandom(listName, lengthList, nbrAnimalsToGenerate) {
         animalElement.appendChild(productionAnimal);
         animalElement.appendChild(priceAnimal);
         animalElement.appendChild(achatBouton);
+
+        buyAnimal(storedAnimals, animalInfo, achatBouton.dataset.price, achatBouton);
     }
 }
-
 generateAnimalRandom(animals, animals.length, 3)
 
-function buyAnimal() {
-    const buttonsAchat = document.querySelectorAll(".buttonAchat")
-    console.log(buttonsAchat)
-    for (let iButtons = 0; iButtons < buttonsAchat.length; iButtons++) {
-        buttonsAchat[iButtons].addEventListener("click", (e) => {
-            console.log(e.target.dataset.price);
-        })
-    }
-}
-buyAnimal()
 
 function afficherInfos() {
     const parentE = document.querySelector(".barreInfos");
     const affichageCapacity = document.createElement("p");
     const capacity = getCapacityFarm();
-    affichageCapacity.innerText = `Capacite de la ferme : x / ${capacity}`
+
+    const listeAnimaux = JSON.parse(localStorage.getItem('animaux')) || [];
+    const capacityActuelle = listeAnimaux.length
+    affichageCapacity.innerText = `Capacite de la ferme : ${capacityActuelle} / ${capacity}`
     parentE.appendChild(affichageCapacity)
 
     const titreMarche = document.createElement("h1");
@@ -117,3 +100,36 @@ function afficherInfos() {
     parentE.appendChild(affichageSolde)
 }
 afficherInfos()
+
+
+function buyAnimal(storedAnimals, animalInfo, price, achatBouton) {
+    // const buttonsAchat = document.querySelectorAll(".buttonAchat")
+    
+    achatBouton.addEventListener("click", (e) => {
+        const testMonneyOk = testMonney(price)
+        
+        if (testMonneyOk) {
+            const testCapacityOk = checkCapacityFarm() 
+            console.log(testCapacityOk)
+
+            if (testCapacityOk) {
+                // Ajoute cet animal au tableau des animaux stockés
+                storedAnimals.push(animalInfo);
+    
+                // Met à jour le localStorage
+                localStorage.setItem('animaux', JSON.stringify(storedAnimals));
+                pullMonney(price)
+                console.log(`Vous avez payé ${price} $`);
+                console.log(`${animalInfo.type} a été ajouté au panier.`);
+                location.reload();
+            } else {
+                console.log("Vous n'avez pas assez de place dans votre ferme");
+            }
+        } else {
+            console.log("Vous n'avez pas assez d'argent");
+        }
+    })
+}
+
+
+

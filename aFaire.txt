@@ -1,3 +1,2 @@
--faire une fonction gérant le click sur le bouton acheter
+-gérer l'achat uniquement si la capacité le permet
 -finir le système d'achat
--afficher les animaux dans l'inventaire

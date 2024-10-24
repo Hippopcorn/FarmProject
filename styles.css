@@ -60,13 +60,12 @@ body {
     align-items: center;
     background-color: rgba(160, 224, 118, 0.5);
     color: rgb(102, 68, 24);
-    
+    height: 70px;
 }
 
 .menu p, .menu a {
     border-image: url(images/CadreBois.png) 80 / 100px round;
     border-color: rgb(96, 124, 54);
-    border-radius: 5%;
     padding: 1%;
     color: rgb(45, 59, 22);
 }
