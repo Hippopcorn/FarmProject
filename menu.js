@@ -1,5 +1,6 @@
 import { getNameFarm, getCapacityFarm } from "./farm.js"
 import { getMonney } from "./monney.js";
+import { checkerDerniereVisite } from "./time.js"
 
 
 function afficherNomFarm() {
@@ -29,3 +30,5 @@ function afficherAnimauxPossédés(){
     const parentE = document.querySelector(".farm");
     // ajouter dans la fonction d'afficher une image pour chaque animal déjà possédé
 }
+
+console.log(checkerDerniereVisite())

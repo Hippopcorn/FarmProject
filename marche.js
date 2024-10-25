@@ -1,5 +1,6 @@
 import { getMonney, testMonney, pullMonney } from "./monney.js";
 import { getCapacityFarm, checkCapacityFarm } from "./farm.js";
+import { checkerVisiteAujourdHui } from "./time.js";
 
 const reponse = await fetch("marche.json");
 const animals = await reponse.json();
@@ -12,9 +13,17 @@ function animalRandom(listName, lengthList) {
     return listName[nbrRandom]
 }
 
+window.localStorage.setItem("animauxAVendre", []); 
+let animauxAVendre = localStorage.getItem('animauxAVendre');
+console.log(animauxAVendre)
+
+
+
 function generateAnimalRandom(listName, lengthList, nbrAnimalsToGenerate) {
+
     let storedAnimals = JSON.parse(localStorage.getItem('animaux')) || []; // Récupère les animaux déjà stockés, sinon un tableau vide
 
+   
     for (let i = 0; i < nbrAnimalsToGenerate; i++) {
         const animalToAdd = animalRandom(listName, lengthList)
         // on génère un Index aléatoire qui servira pour la taille de l'animal et son prix
@@ -74,11 +83,15 @@ function generateAnimalRandom(listName, lengthList, nbrAnimalsToGenerate) {
         animalElement.appendChild(priceAnimal);
         animalElement.appendChild(achatBouton);
 
+        animauxAVendre.push(animalInfo)
+
         buyAnimal(storedAnimals, animalInfo, achatBouton.dataset.price, achatBouton);
     }
 }
-generateAnimalRandom(animals, animals.length, 3)
 
+if (checkerVisiteAujourdHui() == false || window.localStorage.getItem("animauxAVendre").length < 3) {
+    generateAnimalRandom(animals, animals.length, 3)
+}
 
 function afficherInfos() {
     const parentE = document.querySelector(".barreInfos");

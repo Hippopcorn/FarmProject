@@ -1,2 +1,1 @@
--gérer l'achat uniquement si la capacité le permet
--finir le système d'achat
+-gérer les journées

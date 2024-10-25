@@ -1,4 +1,7 @@
 import { initFarm } from "./farm.js";
+import { setDateVisite } from "./time.js";
+
+setDateVisite()
 
 //Récupérer le nom de la ferme
 const formulaireFarmName = document.querySelector(".formNameFarm");
